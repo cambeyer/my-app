@@ -1,0 +1,66 @@
+body {
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 2em;
+    background-color: lightyellow;
+}
+
+.dropdown {
+    margin: 10px 175px;
+}
+
+.dropdown-item {
+    font-size: 2em;
+    color: darkslategray;
+}
+
+.pony-list ul {
+    list-style: none;
+    padding: 0px 0px;
+}
+
+.title {
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.btn {
+    font-size: 1em;
+}
+
+.dropdown-menu {
+    font-size: 1em;
+}
+
+.pony-list {
+    padding: 0px;
+}
+
+.pony-list  div {
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+    display: inline-block;
+    margin: 20px 20px;
+}
+
+.pony-list div li {
+    display: block;
+}
+
+.pony-list .name {
+    color: #F540D1;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.pony-list .kind, .group, .year {
+    color: darkslategray;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.pony-list img {
+    width: 300px;
+    height: 300px;
+}
