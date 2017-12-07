@@ -77,13 +77,23 @@ class FilteredList extends Component {
                       <MenuItem eventKey="Unicorn" onSelect={this.dropdownEvent}>Unicorn</MenuItem>
                       <MenuItem eventKey="Alicorn" onSelect={this.dropdownEvent}>Alicorn</MenuItem>
                       <MenuItem eventKey="Earth pony" onSelect={this.dropdownEvent}>Earth pony</MenuItem>
+                      <MenuItem eventKey="Dragon" onSelect={this.dropdownEvent}>Dragon</MenuItem>
+                      <MenuItem eventKey="Griffon" onSelect={this.dropdownEvent}>Griffon</MenuItem>
+                      <MenuItem eventKey="Changeling" onSelect={this.dropdownEvent}>Changeling</MenuItem>
+                      <MenuItem eventKey="Yak" onSelect={this.dropdownEvent}>Yak</MenuItem>
+                      <MenuItem eventKey="Centaur" onSelect={this.dropdownEvent}>Centaur</MenuItem>
+                      <MenuItem eventKey="Draconequus" onSelect={this.dropdownEvent}>Draconequus</MenuItem>
                     </DropdownButton>
                     <DropdownButton id="groupDropdown" title={"Group"} class="dropdown">
                       <MenuItem eventKey="all" onSelect={this.dropdownEvent2}>All</MenuItem>
-                      <MenuItem eventKey="Mane Six" onSelect={this.dropdownEvent2}>Mane Six</MenuItem>
+                      <MenuItem eventKey="Main Characters" onSelect={this.dropdownEvent2}>Main Characters</MenuItem>
                       <MenuItem eventKey="Royalty" onSelect={this.dropdownEvent2}>Royalty</MenuItem>
                       <MenuItem eventKey="Cutie Mark Crusaders" onSelect={this.dropdownEvent2}>Cutie Mark Crusaders</MenuItem>
                       <MenuItem eventKey="Antagonists" onSelect={this.dropdownEvent2}>Antagonists</MenuItem>
+                      <MenuItem eventKey="Antagonists (reformed)" onSelect={this.dropdownEvent2}>Antagonists (reformed)</MenuItem>
+                      <MenuItem eventKey="Celebrities" onSelect={this.dropdownEvent2}>Celebrities</MenuItem>
+                      <MenuItem eventKey="Wonderbolts" onSelect={this.dropdownEvent2}>Wonderbolts</MenuItem>
+                      <MenuItem eventKey="Pillars of Old Equestria" onSelect={this.dropdownEvent2}>Pillars of Old Equestria</MenuItem>
                     </DropdownButton>
                     <DropdownButton id="sortDropdown" title={"Sort by"} class="dropdown">
                       <MenuItem eventKey="None" onSelect={this.dropdownEvent3}>None</MenuItem>
@@ -92,6 +102,9 @@ class FilteredList extends Component {
                 </div>
                 <div class="pony-list">
                     <List items={this.props.items.filter(this.filterBy).sort(this.sortBy)} />
+                </div>
+                <div class="noResults">
+                    <div>No results</div>
                 </div>
             </div>
         );
