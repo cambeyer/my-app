@@ -101,10 +101,7 @@ class FilteredList extends Component {
                     </DropdownButton>
                 </div>
                 <div class="pony-list">
-                    <List items={this.props.items.filter(this.filterBy).sort(this.sortBy)} />
-                </div>
-                <div class="noResults">
-                    <div>No results</div>
+                    <List items={this.props.items.filter(this.filterBy).sort(this.sortBy)} /> 
                 </div>
             </div>
         );
