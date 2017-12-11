@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { DropdownButton, MenuItem} from 'react-bootstrap';
 import List from './List';
-import ToolTip from 'react-portal-tooltip';
 
 class FilteredList extends Component {
     constructor(props) {

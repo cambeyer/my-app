@@ -18,7 +18,7 @@ class List extends Component {
             var html = 
                 <div>
                     <li class="name">{item.name}</li>
-                    <li class="image"><img src={item.image} alt="Pony"></img></li>
+                    <li class="image" tooltip={item.quote} flow="down"><img src={item.image} alt="Pony"></img></li>
                     <li class="group">{item.group}</li>
                     <li class="kind">{item.kind}</li>
                     <li class="year">{item.year}</li>
