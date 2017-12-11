@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { DropdownButton, MenuItem} from 'react-bootstrap';
 import List from './List';
-import ToolTip from 'react-portal-tooltip';
+
 
 class FilteredList extends Component {
     constructor(props) {
@@ -13,25 +13,26 @@ class FilteredList extends Component {
         };
     }
 
-    filterBy = (item) => {
+    filterBy = (input) => {
         // Checks if the current search term is contained in this item
         if (this.state.kindChoice === "All") {
             if (this.state.groupChoice === "All") {
-                return item.name.toLowerCase().search(this.state.search) !== -1;
+                // return input.name.toLowerCase().search(this.state.search) !== -1;
+                return true;
             }
 
-            if (this.state.groupChoice === item.group) {
-                return item.name.toLowerCase().search(this.state.search) !== -1;
+            if (this.state.groupChoice === input.category) {
+                return input.name.toLowerCase().search(this.state.search) !== -1;
             }
         }
 
-        if (this.state.kindChoice === item.kind) {
+        if (this.state.kindChoice === input.kind) {
             if (this.state.groupChoice === "All") {
-                return item.name.toLowerCase().search(this.state.search) !== -1;
+                return input.name.toLowerCase().search(this.state.search) !== -1;
             }
 
-            if (this.state.groupChoice === item.group) {
-                return item.name.toLowerCase().search(this.state.search) !== -1;
+            if (this.state.groupChoice === input.category) {
+                return input.name.toLowerCase().search(this.state.search) !== -1;
             }
         }
         

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import ToolTip from 'react-portal-tooltip';
+import Pony from './Pony.jsx';
 
 /*
   The list component will take the list of items passed in as a property
@@ -7,26 +8,16 @@ import React, { Component } from 'react';
   filtered produce list, but this component can be used for other types of items 
   as long as it has a name.
 */
+
 class List extends Component {
+    
     renderList() {
-        /*
-           Javascript map will let you iterate and modify each item in a list.
-           In this example, we are changing each item
-           (ex. {name: "Apple", type: "Fruit"}) into a HTML list element.
-        */
-        const items = this.props.items.map(item => {
-            var html = 
-                <div>
-                    <li class="name">{item.name}</li>
-                    <li class="image"><img src={item.image} alt="Pony"></img></li>
-                    <li class="group">{item.group}</li>
-                    <li class="kind">{item.kind}</li>
-                    <li class="year">{item.year}</li>
-                </div>
+        const myponies = this.props.items.map(pony => {
+            var html = <Pony item={pony} />
             return html
         });
 
-        return items;
+        return myponies;
     }
 
     render() {
