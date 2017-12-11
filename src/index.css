@@ -6,12 +6,7 @@ body {
 }
 
 .dropdown {
-    margin: 10px 175px;
-}
-
-.dropdown-item {
-    font-size: 2em;
-    color: darkslategray;
+    margin: 0.5em 0em;
 }
 
 .pony-list ul {
@@ -26,10 +21,14 @@ body {
 
 .btn {
     font-size: 1em;
+    width: 280px;
 }
 
-.dropdown-menu {
+.dropdown-menus {
     font-size: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .pony-list {
@@ -61,6 +60,10 @@ body {
 }
 
 .pony-list img {
-    width: 300px;
     height: 300px;
+}
+
+ul:empty::after{
+  content: attr(data-empty-message);
+  font-size: 150%;
 }

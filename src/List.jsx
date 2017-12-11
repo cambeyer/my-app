@@ -31,7 +31,7 @@ class List extends Component {
 
     render() {
         return (
-            <ul>
+            <ul data-empty-message="No characters match these filters">
                 {this.renderList()}
             </ul>
         );
